@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="ValentineNesya1.png">
+    <title>Surat</title>
+    <link rel="stylesheet" href="letter.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="scroll-wrapper">
+            <div class="text" id="text">Haiii Haloooo Aloooo Nessyyaaa, Neciii, cantiikk, pretty, cute, cutie, short, wonderful, lovely, adorable, good girl, sweetheart, sweetie, queen, princess, hiiii..., hehehe, aku bikin gini lagiii, sueruuu bgttt, mwehehehe. Ummm, ini pertama kalii aku ngerayain valentine, kurang taw jugak konsep nya gimanaa. Yang ku tau sihhh,,, pas valentine itu, menghabiskan waktu berdua gituu yaaa, hehe. Ayo foto2 di genshin, lantern rite, aku nakkk. Selama main genshin, nggak tau foto lantern rite, ayoo foto2 berdua 😁. I want to know more about u. I love your voice (extremely), ur voice, ur voice ur voiceeee, aaaaaaAAAAAAAA, your smile (really), your laugh (obviously), your height (so cute), smiley eyes 😁, i love everything about u ❤️. Kamu asli jakarta ya?, logatnya masih keliatan banget soalnya, ehe, idk but, aku suka logat jakarta mu 🤗. You know what, i am always love u sincerely, for real. I love u soo baaddddd ❤️. Please. I wanna hold ur hands. Kamu kalo pake kacamata jadi makin cantiikkkk, imuuutt, asli, bener dahhh, for real. I like ur clingy side, so kyutt 🥰. I love u everyday. I don't care if i see u without makeup, sweety, tired, stressed, sick, with mata panda, for me, u will always be the most beautiful girl, in the world 🤍. I want to patpat uuuuuu🥺. Lemme be ur man 🥺, i wanna be ur man, im trying 🥹. Maaf kalo keliatannya cuek, amku salmting brutal, hehe. The prettiest girl i've ever seen. Your smile ignites just like a candle light. I will adore u till eternity. Makasih yaa, gatau apa, pokoknya makasiihhh, for everything, anything. Semangaatt yaa, kuliah nyaa, belajar nya, SNBT, SNBP. I always pray for u. I always loving u. Love u forever and ever. Hope. Komitmen. Talking. 
+            </div>
+            <div class="button-grid">
+                <button class="button1" onclick="next1()">Lanjut</button>
+                <button class="button2" onclick="next2()">Lanjut</button>
+                <button class="button3" onclick="next3()">Lanjut</button>
+                <button class="button4" onclick="next4()">Lanjut</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="music-container">
+    <button class="music-button" onclick="toggleMusicPlayer()">
+        <span id="music-btn-text">🎵 Pilih Musik</span>
+    </button>
+</div>
+
+<div id="music-player" class="music-popup">
+    <div class="player-content">
+        <h3 id="song-title">Song</h3>
+        <p id="song-artist">Artis</p>
+        
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress-bar" value="0" max="100" aria-label="Bilah kemajuan lagu">
+            <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+            <button onclick="prevSong()">⏮</button>
+            <button id="play-pause" onclick="playPause()">▶</button>
+            <button onclick="nextSong()">⏭</button>
+        </div>
+        <h4>Volume:</h4>
+        <div class="volume-container">
+            <span>🔈</span>
+                <input type="range" id="volume-slider" min="0" max="100" value="100" >
+            <span id="volume-value">0</span>
+        </div>
+        <h4>Pilih Lagu:</h4>
+        <ul class="song-list">
+            <li onclick="loadSong(0)">1. Jatuh Sejatuh-Jatuhnya</li>
+            <li onclick="loadSong(1)">2. Consume</li>
+            <li onclick="loadSong(2)">3. I Think They Call This Love</li>
+            <li onclick="loadSong(3)">4. Last Night on Earth</li>
+            <li onclick="loadSong(4)">5. Sanctuary</li>
+            <li onclick="loadSong(5)">6. Please, Please, Please, Let Me Get What I Want</li>
+            <li onclick="loadSong(6)">7. Mind Games</li>
+            <li onclick="loadSong(7)">8. The Only Exception</li>
+            <li onclick="loadSong(8)">9. Die For You</li>
+            <li onclick="loadSong(9)">10. Love Me</li>
+            <li onclick="loadSong(10)">11. Laufey</li>
+            <li onclick="loadSong(11)">12. Something About You</li>
+            <li onclick="loadSong(12)">13. I Wanna Be Yours</li>
+            <li onclick="loadSong(13)">14. So Easy (To Fall In Love)</li>
+            <li onclick="loadSong(14)">15. Locked Away</li>
+            <li onclick="loadSong(15)">16. You're Still The One</li>
+            <li onclick="loadSong(16)">17. About You</li>
+            <li onclick="loadSong(17)">18. Be My Baby</li>
+            <li onclick="loadSong(18)">19. SENCY</li>
+            <li onclick="loadSong(19)">20. BIRDS OF A FEATHER</li>
+            <li onclick="loadSong(20)">21. Kota ini tak sama tanpa mu</li>
+            <li onclick="loadSong(21)">22. Love me not</li>
+        </ul>
+    </div>
+</div>
+
+<audio id="audio-source" src=""></audio>
+<audio id="boowomp" src="audio/clicksoundeffect.mp3"></audio>
+
+    <script src="letter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    background-color: #020617;
+    background-image:
+        radial-gradient(at 0% 0%, #FEF2F4 0, transparent 75%),
+        radial-gradient(at 100% 0%, #FCC8D1 0, transparent 75%),
+        radial-gradient(at 50% 100%, #FFABAB 0, transparent 75%),
+        radial-gradient(at 0% 100%, #D14D72 0, transparent 75%);
+    background-size: 200% 200%;
+    -webkit-animation: auroraMove 5s ease-in-out infinite alternate;
+    animation: auroraMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.center {
+    background-image:        radial-gradient(at 0% 0%, #F9F5F6 0, transparent 75%),        radial-gradient(at 100% 0%, #F8E8EE 0, transparent 75%),        radial-gradient(at 50% 100%, #FDCEDF 0, transparent 75%),        radial-gradient(at 0% 100%, #F2BED1 0, transparent 75%);
+    background-size: 200% 200%;
+    -webkit-animation: pageIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards,     auroraMove 5s ease-in-out infinite alternate;
+    animation: auroraMove 5s ease-in-out infinite alternate;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgb(255, 220, 237);
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    animation: pageIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards,     auroraMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes pageIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.center:hover {
+    box-shadow: 0 0 25px rgb(234, 138, 205);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #e7869b;
+    color: white;
+    font-size: 16px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background: #914051;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+
+
+/* Warna Luxury */
+.luxury-red {
+    background-image: radial-gradient(at 0% 0%, #450a0a 0, #7f1d1d 50%, #450a0a 100%) !important;
+    box-shadow: 0 0 25px rgba(127, 29, 29, 0.6) !important;
+    color: #fecaca;
+}
+
+.luxury-green {
+    background-image: radial-gradient(at 0% 0%, #268e72 0, #065f46 50%, #5dceb0 100%) !important;
+    box-shadow: 0 0 25px rgba(6, 78, 59, 0.6) !important;
+    color: #d1fae5;
+}
+
+/* Animasi Teks */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.countdown-text {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+
+/* Buat konten di dalam kartu tidak terlihat dulu */
+.center h1, .center p, .center input, .center button,
+.card h1, .card p, .btn-area,
+.box .text, .box button {
+    opacity: 0;
+    animation: fadeInContent 0.8s ease forwards;
+    animation-delay: 0.5s; /* Muncul setelah 0.5 detik */
+}
+
+@keyframes fadeInContent {
+    to { opacity: 1; }
+}

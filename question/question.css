@@ -1,0 +1,211 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #020617;
+    background-image:
+        radial-gradient(at 0% 0%, #FEF2F4 0, transparent 75%),
+        radial-gradient(at 100% 0%, #FCC8D1 0, transparent 75%),
+        radial-gradient(at 50% 100%, #FFABAB 0, transparent 75%),
+        radial-gradient(at 0% 100%, #D14D72 0, transparent 75%);
+    background-size: 200% 200%;
+    -webkit-animation: auroraMove 5s ease-in-out infinite alternate;
+    animation: auroraMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+h1 {
+    transition: all 0.5s ease;
+    margin-bottom: 5px; /* Jarak kecil ke bawah */
+}
+
+h2 {
+    transition: all 0.5s ease;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 100px;
+    font-size: x-small;
+    margin-top: 0; /* Menghapus jarak atas agar dekat dengan h1 */
+    margin-bottom: 20px;
+}
+
+.btn-area {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 140px; /* Agar area tidak terlalu pendek */
+    margin-top: 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+button {
+    padding: 14px 24px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.card {
+    background: white;
+    padding: 26px;
+    border-radius: 18px;
+    text-align: center;
+    width: 90%;
+    max-width: 340px;
+    box-shadow: 0 0 30px rgb(255, 255, 255, 0.5);
+    position: relative;
+    overflow: visible;
+    background-color: #020617;
+    background-image: radial-gradient(at 0% 0%, #FCF5EE 0, transparent 75%), radial-gradient(at 100% 0%, #FBE8E7 0, transparent 75%), radial-gradient(at 50% 100%, #F7DDDE 0, transparent 75%), radial-gradient(at 0% 100%, #FFC4D0 0, transparent 75%);
+    background-size: 200% 200%;
+    -webkit-animation: pageIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards, auroraMove 5s ease-in-out infinite alternate;
+    animation: auroraMove 5s ease-in-out infinite alternate;
+    transition: all 1s ease;
+    animation: pageIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards, auroraMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes pageIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.card:hover {
+    box-shadow: 0 0 25px rgb(132, 132, 132);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#yes {
+    background: #8fcfb5;
+    color: rgb(0, 64, 32);
+    position: relative;
+    z-index: 3;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 20px rgb(129, 194, 162);
+}
+
+#yes:hover {
+    box-shadow: 0 0 20px rgb(39, 165, 102);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#no {
+    background: #e6a0a0;
+    color: rgb(74, 0, 0);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    z-index: 1;
+    transition: top 0.15s ease, left 0.15s ease, transform 0.15s ease;
+    -webkit-transition: top 0.15s ease, left 0.15s ease, transform 0.15s ease;
+    -moz-transition: top 0.15s ease, left 0.15s ease, transform 0.15s ease;
+    -ms-transition: top 0.15s ease, left 0.15s ease, transform 0.15s ease;
+    -o-transition: top 0.15s ease, left 0.15s ease, transform 0.15s ease;
+    transition: all 0.5s ease;
+}
+
+#no:hover {
+    box-shadow: 0 0 20px rgb(74, 0, 0);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Buat konten di dalam kartu tidak terlihat dulu */
+.center h1, .center p, .center input, .center button,
+.card h1, .card p, .btn-area,
+.box .text, .box button {
+    opacity: 0;
+    animation: fadeInContent 0.8s ease forwards;
+    animation-delay: 0.5s; /* Muncul setelah 0.5 detik */
+}
+
+@keyframes fadeInContent {
+    to { opacity: 1; }
+}
+
+/* Style untuk teks tambahan */
+.extra-text {
+    font-size: 0.6rem;
+    color: #888;
+    margin-top: 20px;
+    font-style: italic;
+    opacity: 0.7;
+}

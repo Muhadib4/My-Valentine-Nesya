@@ -1,0 +1,756 @@
+*{
+    font-family: 'montserrat', sans-serif;
+    font-weight: 250px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    background-color: #1a050a;
+    background-image:
+        radial-gradient(at 0% 0%, #590d22 0px, transparent 50%),
+        radial-gradient(at 100% 0%, #9d5764 0px, transparent 50%),
+        radial-gradient(at 100% 100%, #800f2f 0px, transparent 50%),
+        radial-gradient(at 0% 100%, #77414b 0px, transparent 50%),
+        radial-gradient(at 50% 50%, #2e0212 0px, transparent 50%);
+    background-size: 300% 300%;
+    -webkit-animation: auroraMove 15s ease-in-out infinite alternate;
+    animation: auroraMove 15s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 360px;
+    box-shadow: 0 0px 30px rgb(115, 88, 110, 05);
+    animation: fade 1s ease;
+    background-image: radial-gradient(at 50% 0%, #670D2F 0, transparent 75%), radial-gradient(at 0% 0%, #fef9f0 0, transparent 75%), radial-gradient(at 100% 0%, #fff7e9 0, transparent 75%), radial-gradient(at 50% 100%, #EF88AD 0, transparent 100%), radial-gradient(at 0% 100%, #ffdd99 0, transparent 75%), radial-gradient(at 0% 100%, #A53860 0, transparent 75%);
+    background-size: 200% 200%;
+    -webkit-animation: pageIn 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards, auroraMove 10s ease-in-out infinite alternate;
+    animation: auroraMove 10s ease-in-out infinite alternate;
+    animation: pageIn 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards, auroraMove 10s ease-in-out infinite alternate;
+    transition: all 0.5s ease;
+}
+
+@keyframes pageIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.box:hover {
+    box-shadow: 0 0px 30px rgb(107, 3, 48);
+    transition: all 0.5s ease;
+}
+
+h4 {
+    text-align: center;
+    color: #3A0519;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-shadow: 0 0px 25px #EF88AD;
+    margin: 10px;
+}
+
+
+
+
+/* text */
+.scroll-wrapper {
+    max-height: 350px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+    display: none;
+    width: 4px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.text {
+    white-space: pre-line;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.text span {
+    display: inline-block;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+
+    display: inline-block;
+    transition: 0.5s;
+
+}
+
+.text span:hover {
+    color: #ff8fa3;
+    text-shadow: 0 0px 15px #000000;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+
+
+
+/* Container Utama Tombol */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+    grid-template-areas:
+        "b1 b1"
+        "b3 b4"
+        "b2 b2";
+}
+
+/* Reset margin-top pada tombol karena sudah diatur oleh gap di grid */
+button {
+    margin-top: 0 !important;
+    width: 100%;
+    padding: 12px 5px;
+    /*Paddingdiperkecilagarpasdigrid*/
+    font-size: 0.85rem;
+    /*Ukuranteksdisesuaikan*/
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-size: 200% 200%;
+    animation: luxuryMove 3s ease infinite alternate;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.button1 {
+    grid-area: b1;
+    background-image: radial-gradient(at 0% 0%, #9d0208 0%, #a4133c 50%, #c9184a 100%);
+}
+
+.button2 {
+    grid-area: b2;
+    background-image: radial-gradient(at 0% 0%, #f08080 0%, #f4978e 50%, #f8ad9d 100%);
+}
+
+.button3 {
+    grid-area: b3;
+    background-image: radial-gradient(at 0% 0%, #386641 0%, #6a994e 50%, #a7c957 100%);
+}
+
+.button4 {
+    grid-area: b4;
+    background-image: radial-gradient(at 0% 0%, #023e8a 0%, #0077b6 50%, #0096c7 100%);
+}
+
+
+button:hover {
+    z-index: 10;
+    -webkit-transform: scale(0.91) translateY(-3px);
+    -moz-transform: scale(0.91) translateY(-3px);
+    -ms-transform: scale(0.91) translateY(-3px);
+    -o-transform: scale(0.91) translateY(-3px);
+    transform: scale(0.91) translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.button1:hover {
+    box-shadow: 0 0px 10px #250902;
+}
+
+.button2:hover {
+    box-shadow: 0 0px 10px #522e38;
+}
+
+.button3:hover {
+    box-shadow: 0 0px 10px #011a01;
+}
+
+.button4:hover {
+    box-shadow: 0 0px 10px #000814;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+/* Saat di-hover, lapisan warna hover muncul perlahan */
+button:hover::before {
+    opacity: 1;
+}
+
+/* Contoh khusus warna hover untuk masing-masing tombol jika ingin beda-beda */
+.button1::before {
+    background-image: radial-gradient(at 0% 0%, #250902 0%, #38040e 50%, #640d14 100%);
+}
+
+.button2::before {
+    background-image: radial-gradient(at 0% 0%, #522e38 0%, #602437 50%, #8a2846 100%);
+}
+
+.button3::before {
+    background-image: radial-gradient(at 0% 0%, #011a01 0%, #093802 50%, #2a5a00 100%);
+}
+
+.button4::before {
+    background-image: radial-gradient(at 0% 0%, #000814 0%, #001d3d 50%, #003566 100%);
+}
+
+
+/* 1. Animasi Gradasi Bergeser */
+@keyframes luxuryMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* 2. Animasi Denyut Halus (Gerak-gerak) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 25%;
+    height: 200%;
+    background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    z-index: 1;
+    -webkit-animation: shimmer 3s infinite;
+    animation: shimmer 3s infinite;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+@keyframes shimmer {
+    0% {
+        left: -60%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+/* Buat konten di dalam kartu tidak terlihat dulu */
+.center h1,
+.center p,
+.center input,
+.center button,
+.card h1,
+.card p,
+.btn-area,
+.box .text,
+.box button {
+    opacity: 0;
+    animation: fadeInContent 0.8s ease forwards;
+    animation-delay: 0.5s;
+    /* Muncul setelah 0.5 detik */
+}
+
+@keyframes fadeInContent {
+    to {
+        opacity: 1;
+    }
+}
+
+/* //////////////////////// */
+
+.music-container {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: auto;
+    text-align: center;
+}
+
+.music-button {
+    background-image: radial-gradient(at 0% 0%, #A53860 0%, #670D2F 50%, #3A0519 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 25px;
+    border-radius: 50px;
+    /* Biar bentuknya kapsul */
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+}
+
+/* Efek Hover */
+.music-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0px 20px #EF88AD;
+    background-image: radial-gradient(at 0% 0%, #EF88AD 0%, #A53860 50%, #670D2F 100%);
+}
+
+.music-button:active {
+    transform: scale(0.95);
+}
+
+/* Animasi sederhana biar tombolnya 'bernafas' */
+.music-container {
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -5px);
+    }
+}
+
+
+
+
+
+
+
+/* Container Utama yang diblur saat musik buka */
+.blur-effect {
+    filter: blur(5px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+/* Pop-up Music Player */
+.music-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 85%;
+    max-width: 320px;
+    background-image:
+        radial-gradient(at 50% 0%, #bde0fe 0, transparent 75%),
+        radial-gradient(at 0% 0%, #ac46a1 0, transparent 75%),
+        radial-gradient(at 100% 0%, #800f2f 0, transparent 75%),
+        radial-gradient(at 50% 100%, #fb6f92 0, transparent 75%),
+        radial-gradient(at 0% 100%, #cdb4db 0, transparent 75%);
+    background-size: 200% 200%;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    scroll-behavior: none;
+    -webkit-animation: auroraMove 5s ease-in-out infinite alternate;
+    animation: auroraMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+.music-popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.player-content {
+    text-align: center;
+    color: #3A0519;
+}
+
+x .volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+#volume-slider {
+    /*width: 200px;
+    */
+    width: 60%;
+    cursor: pointer;
+    accent-color: #EF88AD;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#volume-slider:hover {
+    accent-color: #590d22;
+}
+
+#volume-slider:active {
+    transform: scale(1.05);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    background: #A53860;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0px 15px rgba(165, 56, 96);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#volume-slider::-moz-range-thumb {
+    background: #A53860;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0px 15px rgba(165, 56, 96);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#volume-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 30px;
+    color: #3A0519;
+    /* Sesuaikan warna teks jika pakai dark mode */
+}
+
+/* Jika kamu pakai tema gelap di music player, pastikan warna teks indikator putih */
+.player-content #volume-value {
+    color: white;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3A0519;
+    text-shadow: 0 0px 25px #000000;
+}
+
+p {
+    margin: 5px 0 15px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.8;
+    color: #3A0519;
+    text-shadow: 0 0px 25px #000000;
+}
+
+#song-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px;
+}
+
+#song-artist {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin: 5px;
+}
+
+/* Progress Bar */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+#progress-bar {
+    width: 60%;
+    cursor: pointer;
+    accent-color: #cd5e87;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#progress-bar:hover {
+    accent-color: #590d22;
+}
+
+#progress-bar:active {
+    transform: scale(1.05);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#progress-bar::-webkit-slider-thumb {
+    background: #A53860;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0px 15px rgba(165, 56, 96);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#progress-bar::-moz-range-thumb {
+    background: #A53860;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0px 15px rgba(165, 56, 96);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    background: linear-gradient(45deg, #A53860, #EF88AD);
+    /* Warna gradasi pink-maroon */
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 0px 25px rgba(165, 56, 96);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Song List */
+.song-list {
+    list-style: none;
+    padding: 0px 0; 
+    margin: 0;
+    max-height: 100px; 
+    overflow-y: auto;
+    text-align: left;
+    /* scroll-behavior: smooth; */
+    
+    /* Efek Masking: Membuat bagian atas dan bawah list memudar */
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+
+    scrollbar-width: auto; 
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+
+
+.song-list li {
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 15px;
+
+    background: linear-gradient(45deg, #3a0519, #602437, #b0475e, transparent, transparent);
+
+    background-size: 400% 100%;
+
+    background-position: 100% 0%;
+
+    color: inherit;
+    transition: all 0.5s ease;
+
+}
+
+.song-list li:hover {
+    background-position: 0% 0%;
+    color: #cd9fb0;
+
+}
+
+.song-list li:active {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.song-list li::-webkit-scrollbar {
+    display: none;
+    width: 4px;
+}
+
+.song-list li::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.song-list li::-moz-range-webkit-slider-thumb {
+    background: #A53860;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0px 15px rgba(165, 56, 96);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.song-list li::-moz-range-thumb {
+    background: #A53860;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0px 15px rgba(165, 56, 96);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
