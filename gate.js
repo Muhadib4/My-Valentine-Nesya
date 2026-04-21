@@ -6,13 +6,7 @@ function check() {
 
 // ////////////////////////////////////////////////////
 
-    // --- PENCATAT HISTORY ---
-    // 1. Tampilkan di Console Browser (Klik kanan > Inspect > Console untuk melihat)
-    console.log(`[HISTORY] Nama: ${val} | Waktu: ${new Date().toLocaleString()} | Device: ${navigator.userAgent}`);
-
-    // 2. Kirim ke Discord (Opsional: Isi URL Webhook di bawah agar muncul notifikasi di laptopmu)
-    
-
+   
 ///////////////////////////////////////
 
     // Hapus konten di dalam container untuk animasi
