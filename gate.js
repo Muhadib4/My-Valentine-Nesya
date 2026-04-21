@@ -11,27 +11,7 @@ function check() {
     console.log(`[HISTORY] Nama: ${val} | Waktu: ${new Date().toLocaleString()} | Device: ${navigator.userAgent}`);
 
     // 2. Kirim ke Discord (Opsional: Isi URL Webhook di bawah agar muncul notifikasi di laptopmu)
-    const webhookURL = "https://discord.com/api/webhooks/1470065627740897561/fTpkZHJc46ZpEhVUuQS-LTms6iGdIzh1z9O90ZwcthOVJgPdDNyhryYghZI3EcQFBecJ"; // <-- CONTOH: "https://discord.com/api/webhooks/..."
-
-    if (webhookURL) {
-        fetch(webhookURL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                embeds: [{
-                    title: "📝 Log Masuk Baru",
-                    color: 16711760, // Warna Pink Valentine
-                    fields: [
-                        { name: "👤 Nama", value: `**${val}**`, inline: true },
-                        { name: "🕒 Waktu", value: new Date().toLocaleString(), inline: true },
-                        { name: "📱 Device", value: `\`${navigator.userAgent}\`` }
-                    ],
-                    footer: { text: "Valentine System Log" },
-                    timestamp: new Date().toISOString()
-                }]
-            })
-        }).catch(err => console.log("Gagal kirim log:", err));
-    }
+    
 
 ///////////////////////////////////////
 
